@@ -1,0 +1,6 @@
+#!/bin/bash
+cd $( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd ../
+
+export DEBUG=true
+celery --app=api.celery_worker.celery worker --loglevel=info -E

@@ -1,0 +1,6 @@
+#!/bin/bash
+cd $( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd ../
+
+export DEBUG=true
+uvicorn api:app --reload --host "0.0.0.0" --port 5000
